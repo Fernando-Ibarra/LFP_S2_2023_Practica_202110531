@@ -19,11 +19,21 @@ def validMenu( optionSelected: str ):
     if ( optionSelected == "Cargar inventario inicial" ):
         helpers.onStartChangeDB()
     elif ( optionSelected == "Cargar instrucciones de movimientos" ):
-        print('2')
+        helpers.onStartChangeDB()
     elif ( optionSelected == "Crear informe de inventario" ):
         helpers.outTxtFIle(filename="stock.txt", products=products)
     else:
         sys.exit()
+        
+def pause():
+    questions = [
+        inquirer.Confirm("continue", message="¿Deseas continuar?"),
+    ]
+
+    answers = inquirer.prompt(questions)
+    optionSelected = answers["continue"]
+    print(optionSelected)
+    
 
 def initialMenu():
     os.system('cls')

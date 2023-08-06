@@ -42,31 +42,31 @@ def read() -> bool:
         
         arrayWords = auxline.split()
         instruction = arrayWords[0]
-        produc = arrayWords[1].split(";")
+        product = arrayWords[1].split(";")
         
         if ( instruction == optionInstruction[0]):
             product_dict = {
                 "instruction":instruction,
-                "product_name": produc[0],
-                "product_amount": int(produc[1]),
-                "product_price": float(produc[2]),
-                "product_location": produc[3],
+                "product_name": product[0],
+                "product_amount": int(product[1]),
+                "product_price": float(product[2]),
+                "product_location": product[3],
             }
         
         if ( instruction == optionInstruction[1]):
             product_dict = {
                 "instruction":instruction,
-                "product_name": produc[0],
-                "product_amount": int(produc[1]),
-                "product_location": produc[3],
+                "product_name": product[0],
+                "product_amount": int(product[1]),
+                "product_location": product[2],
             }
         
         if ( instruction == optionInstruction[2]):
             product_dict = {
                 "instruction":instruction,
-                "product_name": produc[0],
-                "product_amount": int(produc[1]),
-                "product_location": produc[3],
+                "product_name": product[0],
+                "product_amount": int(product[1]),
+                "product_location": product[2],
             }
             
         stocksGroup.append(product_dict)
