@@ -1,6 +1,6 @@
 from models import Product
 
-products = [Product]
+products: Product = []
 initialStock = []
 stockManagement = []
 errorMaganement = []

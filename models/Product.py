@@ -1,4 +1,8 @@
 class Product(object):
+    name: str
+    amount: int
+    price: float
+    location: str
     
     def __init__(self, name, amount, price, location) -> None:
         self.name = name

@@ -1,9 +1,13 @@
 import os
 import sys
 import inquirer
-from .uploadStock import upload
+import importlib
 
-# MENU INICIAL
+helpers = importlib.import_module("helpers")
+from db import products
+
+
+# Main Menu
 options = [
     "Cargar inventario inicial",
     "Cargar instrucciones de movimientos",
@@ -13,11 +17,11 @@ options = [
 
 def validMenu( optionSelected: str ):
     if ( optionSelected == "Cargar inventario inicial" ):
-        upload()
+        helpers.read()
     elif ( optionSelected == "Cargar instrucciones de movimientos" ):
         print('2')
     elif ( optionSelected == "Crear informe de inventario" ):
-        print('3')
+        helpers.outTxtFIle(filename="stock.txt", products=products)
     else:
         sys.exit()
 
@@ -28,11 +32,11 @@ def initialMenu():
         inquirer.List(
             name="menu",
             message="¿Qué desea hacer?",
-            choices=options
+            choices=options,
+            carousel=True
         )
     ]
         
     answers: list = inquirer.prompt(menuOptions)
     optionSelected: int = answers["menu"]
     validMenu( optionSelected )
-    

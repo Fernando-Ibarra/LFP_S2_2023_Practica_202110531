@@ -1,5 +1,9 @@
 import inquirer
-from db import initialStock
+import importlib
+
+from db import initialStock, products
+from models import Product
+helpers = importlib.import_module("helpers")
 
 # Path
 def pathRequired( mess ) -> str:
@@ -15,7 +19,14 @@ def pathRequired( mess ) -> str:
     path: str = answers["path"]
     return path
 
-def upload() -> None:
+# Database
+def chargeDB( initialStockProp = [] ):
+    for stock in initialStockProp:
+        product: Product = Product(name=stock['product_name'], amount=stock['product_amount'], price=stock['product_price'], location=stock['product_location'])
+        products.append(product)
+
+# Read lines
+def read() -> None:
     path: str = pathRequired('Ingresa la ruta del archivo')
     file1 = open(path, 'r')
     count = 0
@@ -25,7 +36,7 @@ def upload() -> None:
     
         line = file1.readline()
         
-        # Quitar salto de linea
+        # Cleanning lines
         auxline = line.strip()
         
         if not auxline:
@@ -46,9 +57,5 @@ def upload() -> None:
         initialStock.append(product_dict)
     
     file1.close()
-    for stock in initialStock:
-        print(f"Intrucción: { stock['instruction'] }")
-        print(f"Nombre: { stock['product_name'] }")
-        print(f"Cantidad: { stock['product_amount'] }")
-        print(f"Precio: { stock['product_price'] }")
-        print(f"Locación: { stock['product_location'] }", end="\n")
+    chargeDB( initialStock )
+    helpers.initialMenu()
