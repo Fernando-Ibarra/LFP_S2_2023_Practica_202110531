@@ -1,0 +1,7 @@
+Informe de Inventario:
+Producto   Cantidad   Precio Unitario   Valor Total   Ubicación
+---------------------------------------------------------------
+ Manzanas       100            Q 2.5       Q 250.0       BodegaA
+ Peras       50            Q 3.0       Q 150.0       BodegaB
+ Platanos       75            Q 1.75       Q 131.25       BodegaC
+Generado el 2023-08-06

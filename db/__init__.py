@@ -1,1 +1,1 @@
-from .database import products, initialStock, errorMaganement, stockManagement
+from .database import products, stocks, errorMaganement

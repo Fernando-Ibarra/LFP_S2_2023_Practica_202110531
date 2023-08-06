@@ -17,7 +17,7 @@ options = [
 
 def validMenu( optionSelected: str ):
     if ( optionSelected == "Cargar inventario inicial" ):
-        helpers.read()
+        helpers.onStartChangeDB()
     elif ( optionSelected == "Cargar instrucciones de movimientos" ):
         print('2')
     elif ( optionSelected == "Crear informe de inventario" ):
