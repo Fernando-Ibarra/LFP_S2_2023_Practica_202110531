@@ -1,7 +1,5 @@
 import inquirer
 
-stocksGroup = []
-
 # instruction
 optionInstruction = [
     "crear_producto",
@@ -24,9 +22,10 @@ def pathRequired( mess ) -> str:
     return path
 
 # Read lines
-def read() -> bool:
+def read() -> []:
+    stocksGroup = []
     path: str = pathRequired('Ingresa la ruta del archivo')
-    file1 = open(path, 'r')
+    file1 = open(path, mode = 'r', encoding='utf-8')
     count = 0
  
     while True:

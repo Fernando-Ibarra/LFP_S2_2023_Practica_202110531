@@ -1,7 +1,16 @@
 Informe de Inventario:
 Producto   Cantidad   Precio Unitario   Valor Total   Ubicación
 ---------------------------------------------------------------
- Manzanas       25            Q 2.5       Q 62.5       BodegaA
- Peras       55            Q 3.0       Q 165.0       BodegaB
- Platanos       5            Q 1.75       Q 8.75       BodegaC
-Generado el 2023-08-06
+ Tomates       100            Q 1.0       Q 100.0       BodegaA
+ Arándanos       155            Q 0.5       Q 77.5       BodegaA
+ Helado       80            Q 6.5       Q 520.0       BodegaB
+ Peras       175            Q 3.25       Q 568.75       BodegaC
+ Plátanos       75            Q 1.75       Q 131.25       BodegaD
+ Queso       60            Q 20.5       Q 1230.0       BodegaD
+ Queso       35            Q 20.5       Q 717.5       BodegaE
+ Peras       101            Q 3.25       Q 328.25       BodegaE
+ Helado       172            Q 6.5       Q 1118.0       BodegaF
+ Manzanas       150            Q 3.0       Q 450.0       BodegaF
+ Arándanos       735            Q 0.5       Q 367.5       BodegaG
+ Tomates       1            Q 1.0       Q 1.0       BodegaG
+Generado el 08-13-2023 23:30:26

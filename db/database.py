@@ -1,5 +1,5 @@
 from models import Product
 
-products: Product = []
+products = []
 stocks = []
 errorMaganement = []
