@@ -6,7 +6,6 @@ import importlib
 helpers = importlib.import_module("helpers")
 from db import products
 
-
 # Main Menu
 options = [
     "Cargar inventario inicial",
@@ -49,4 +48,4 @@ def initialMenu():
         
     answers: list = inquirer.prompt(menuOptions)
     optionSelected: int = answers["menu"]
-    validMenu( optionSelected )
+    validMenu( optionSelected ) 

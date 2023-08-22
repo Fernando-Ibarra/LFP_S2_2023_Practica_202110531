@@ -1,6 +1,8 @@
 import os
 import datetime
+import importlib
 from tabulate import tabulate
+helpers = importlib.import_module("helpers")
 
 def outTxtFIle(filename: str, products = []):
     path = os.path.join(os.getcwd(), filename)
@@ -18,4 +20,6 @@ def outTxtFIle(filename: str, products = []):
         f.write('\n')
         f.write(F'  Generado el { now.strftime("%m-%d-%Y %H:%M:%S") }')
         f.close()
+    helpers.pause()
+    helpers.initialMenu()
         
